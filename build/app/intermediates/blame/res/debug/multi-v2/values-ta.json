@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-ta/values-ta.xml",
+            "outputFile": "/home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-ta/values-ta.xml",
             "map": [
                 {
                     "source": "/home/genius/.gradle/caches/transforms-2/files-2.1/bef79c3e255356c0892d43a27fa086a0/core-1.1.0/res/values-ta/values-ta.xml",
