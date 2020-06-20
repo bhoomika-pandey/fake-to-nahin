@@ -1,5 +1,13 @@
+import 'package:fake_to_nahin/screens/MyPostsScreen.dart';
+import 'package:fake_to_nahin/screens/SavedPostsScreen.dart';
 import 'package:flutter/material.dart';
-
+import 'screens/CreatePostScreen.dart';
+import 'screens/HomeScreen.dart';
+import 'screens/SignInScreen.dart';
+import 'screens/SignUpScreen.dart';
+import 'screens/PostScreen.dart';
+import 'screens/ProfileScreen.dart';
+import 'screens/ProfileEditScreen.dart';
 
 void main() {
   runApp(MyApp());

@@ -1,29 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "/home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/home/bhoomika/Desktop/fake_to_nahin/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
-                    "source": "/home/genius/Desktop/Hack Jaipur/fake_to_nahin/android/app/src/main/res/values/styles.xml",
+                    "source": "/home/bhoomika/Desktop/fake_to_nahin/build/app/generated/res/google-services/debug/values/values.xml",
                     "from": {
-                        "startLines": "3,14",
-                        "startColumns": "4,4",
-                        "startOffsets": "134,777",
-                        "endLines": "7,16",
-                        "endColumns": "12,12",
-                        "endOffsets": "426,937"
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,199,305,387,491,600,720,815",
+                        "endColumns": "143,105,81,103,108,119,94,71",
+                        "endOffsets": "194,300,382,486,595,715,810,882"
                     },
                     "to": {
-                        "startLines": "114,119",
-                        "startColumns": "4,4",
-                        "startOffsets": "8672,8969",
-                        "endLines": "118,121",
-                        "endColumns": "12,12",
-                        "endOffsets": "8964,9129"
+                        "startLines": "105,106,107,108,109,110,111,112",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "7769,7913,8019,8101,8205,8314,8434,8529",
+                        "endColumns": "143,105,81,103,108,119,94,71",
+                        "endOffsets": "7908,8014,8096,8200,8309,8429,8524,8596"
                     }
                 },
                 {
-                    "source": "/home/genius/.gradle/caches/transforms-2/files-2.1/9cca5f1278ef9f1a6445188146e629ad/play-services-base-17.1.0/res/values/values.xml",
+                    "source": "/home/bhoomika/.gradle/caches/transforms-2/files-2.1/9cca5f1278ef9f1a6445188146e629ad/play-services-base-17.1.0/res/values/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,33,46",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -42,24 +40,7 @@
                     }
                 },
                 {
-                    "source": "/home/genius/.gradle/caches/transforms-2/files-2.1/e926fc7b688e216295749f2031c38169/jetified-play-services-basement-17.0.0/res/values/values.xml",
-                    "from": {
-                        "startLines": "4,7",
-                        "startColumns": "0,0",
-                        "startOffsets": "238,401",
-                        "endColumns": "63,166",
-                        "endOffsets": "301,567"
-                    },
-                    "to": {
-                        "startLines": "85,95",
-                        "startColumns": "4,4",
-                        "startOffsets": "5298,6476",
-                        "endColumns": "67,166",
-                        "endOffsets": "5361,6638"
-                    }
-                },
-                {
-                    "source": "/home/genius/.gradle/caches/transforms-2/files-2.1/bef79c3e255356c0892d43a27fa086a0/core-1.1.0/res/values/values.xml",
+                    "source": "/home/bhoomika/.gradle/caches/transforms-2/files-2.1/bef79c3e255356c0892d43a27fa086a0/core-1.1.0/res/values/values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,83,84,88,89,90,91,98,141,173,210",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -78,24 +59,43 @@
                     }
                 },
                 {
-                    "source": "/home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/app/generated/res/google-services/debug/values/values.xml",
+                    "source": "/home/bhoomika/.gradle/caches/transforms-2/files-2.1/11d548cc742a86bd3e1fd4c83c73dbc0/jetified-play-services-basement-17.0.0/res/values/values.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,199,305,387,491,600,720,815",
-                        "endColumns": "143,105,81,103,108,119,94,71",
-                        "endOffsets": "194,300,382,486,595,715,810,882"
+                        "startLines": "4,7",
+                        "startColumns": "0,0",
+                        "startOffsets": "238,401",
+                        "endColumns": "63,166",
+                        "endOffsets": "301,567"
                     },
                     "to": {
-                        "startLines": "105,106,107,108,109,110,111,112",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "7769,7913,8019,8101,8205,8314,8434,8529",
-                        "endColumns": "143,105,81,103,108,119,94,71",
-                        "endOffsets": "7908,8014,8096,8200,8309,8429,8524,8596"
+                        "startLines": "85,95",
+                        "startColumns": "4,4",
+                        "startOffsets": "5298,6476",
+                        "endColumns": "67,166",
+                        "endOffsets": "5361,6638"
                     }
                 },
                 {
-                    "source": "/home/genius/Desktop/Hack Jaipur/fake_to_nahin/android/app/src/main/res/values/color.xml",
+                    "source": "/home/bhoomika/Desktop/fake_to_nahin/android/app/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "3,14",
+                        "startColumns": "4,4",
+                        "startOffsets": "134,777",
+                        "endLines": "7,16",
+                        "endColumns": "12,12",
+                        "endOffsets": "426,937"
+                    },
+                    "to": {
+                        "startLines": "114,119",
+                        "startColumns": "4,4",
+                        "startOffsets": "8672,8969",
+                        "endLines": "118,121",
+                        "endColumns": "12,12",
+                        "endOffsets": "8964,9129"
+                    }
+                },
+                {
+                    "source": "/home/bhoomika/Desktop/fake_to_nahin/android/app/src/main/res/values/color.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
