@@ -1,4 +1,6 @@
+import 'package:fake_to_nahin/models/UserModel.dart';
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class SignInScreen extends StatefulWidget {
   @override
@@ -34,7 +36,7 @@ class _SignInScreenState extends State<SignInScreen> {
                         margin: EdgeInsets.only(right: 20, left: 10),
                         child: TextField(
                           controller: emailLoginController,
-                          decoration: InputDecoration(hintText: 'Username'),
+                          decoration: InputDecoration(hintText: 'Email'),
                         )))
               ],
             ),
@@ -65,8 +67,26 @@ class _SignInScreenState extends State<SignInScreen> {
               child: Container(
                 height: 60,
                 child: RaisedButton(
-                  onPressed: () {
-                    Navigator.pushReplacementNamed(context, 'Home');
+                  onPressed: () async {
+                    final usersCollectionRef =
+                        Firestore.instance.collection("users");
+                    final userDoc = await usersCollectionRef
+                        .document(emailLoginController.text)
+                        .get();
+
+                    if (userDoc.data["password"] ==
+                        passwordLoginController.text) {
+                      Navigator.pushReplacementNamed(context, 'Home');
+                    } else {
+                      return showDialog(
+                        context: context,
+                        builder: (context) {
+                          return AlertDialog(
+                            content: Text("Password Incorrect"),
+                          );
+                        },
+                      );
+                    }
                   },
                   color: Colors.lightBlue[800],
                   child: Text(
@@ -109,3 +129,12 @@ class _SignInScreenState extends State<SignInScreen> {
     );
   }
 }
+
+// return showDialog(
+//   context: context,
+//   builder: (context) {
+//     return AlertDialog(
+//       content: Text(currentUser.firstName),
+//     );
+//   },
+// );

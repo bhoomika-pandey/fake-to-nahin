@@ -1,8 +1,13 @@
+import 'package:fake_to_nahin/screens/MyPostsScreen.dart';
+import 'package:fake_to_nahin/screens/SavedPostsScreen.dart';
 import 'package:flutter/material.dart';
+import 'screens/CreatePostScreen.dart';
 import 'screens/HomeScreen.dart';
 import 'screens/SignInScreen.dart';
 import 'screens/SignUpScreen.dart';
 import 'screens/PostScreen.dart';
+import 'screens/ProfileScreen.dart';
+import 'screens/ProfileEditScreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -38,12 +43,12 @@ class MyApp extends StatelessWidget {
         'SignIn': (context) => SignInScreen(),
         'SignUp': (context) => SignUpScreen(),
         'Home': (context) => HomeScreen(),
-        // 'CreatePost': (context) => CreatePostScreen(),
-        // 'Profile': (context) => ProfileScreen(),
-        // 'ProfileEdit': (context) => ProfileEditScreen(),
-        // 'Post': (context) => PostScreen(),
-        // 'MyPosts': (context) => MyPostsScreen(),
-        // 'SavedPosts': (context) => SavedPostsScreen(),
+        'CreatePost': (context) => CreatePostScreen(),
+        'Profile': (context) => ProfileScreen(),
+        'ProfileEdit': (context) => ProfileEditScreen(),
+        'Post': (context) => PostScreen(),
+        'MyPosts': (context) => MyPostsScreen(),
+        'SavedPosts': (context) => SavedPostsScreen(),
       },
     );
   }

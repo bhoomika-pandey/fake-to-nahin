@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../controllers/drawer.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -11,7 +12,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: Drawer(
-        // child: DrawerButton(),
+        child: DrawerButton(),
       ),
       appBar: AppBar(
         title: Text(

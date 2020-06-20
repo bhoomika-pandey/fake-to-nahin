@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 
 class CreatePostScreen extends StatefulWidget {
   @override
@@ -18,6 +20,9 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
       _image = File(pickedFile.path);
     });
   }
+  var storage = FirebaseStorage.instance;
+  TextEditingController titleController = new TextEditingController();
+  TextEditingController descriptionController = new TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +34,7 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
             textTheme: ButtonTextTheme.primary,
             color: Theme.of(context).primaryColor,
             splashColor: Colors.white54,
-            onPressed: () {
+            onPressed: () {UploadPost(titleController, descriptionController);
               Navigator.pushNamedAndRemoveUntil(context,'Home', ModalRoute.withName('/'));
             },
             child: Row(
@@ -46,19 +51,23 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
         child: ListView(
           padding: EdgeInsets.fromLTRB(5, 10, 5, 0),
           children:[
-            Text('Heading',style:TextStyle(fontWeight: FontWeight.bold,fontSize: 26,color: Colors.lightBlue[800])),
-            TextField(maxLines:3,keyboardType: TextInputType.multiline,style: TextStyle(fontSize: 20,color:Colors.black),decoration: InputDecoration(hintText:'Please Enter Heading for your post'),),
+            Text('Title',style:TextStyle(fontWeight: FontWeight.bold,fontSize: 26,color: Colors.lightBlue[800])),
+            TextField(controller: titleController,maxLines:3,keyboardType: TextInputType.multiline,style: TextStyle(fontSize: 20,color:Colors.black),decoration: InputDecoration(hintText:'Please Enter Heading for your post'),),
             Text('Description',style:TextStyle(fontWeight: FontWeight.bold,fontSize: 26,color: Colors.lightBlue[800])),
-            TextField(keyboardType: TextInputType.multiline,maxLines:3,style: TextStyle(fontSize: 20,color:Colors.black),decoration: InputDecoration(hintText:'Please Enter Description for your post'),),
+            TextField(controller: descriptionController,keyboardType: TextInputType.multiline,maxLines:3,style: TextStyle(fontSize: 20,color:Colors.black),decoration: InputDecoration(hintText:'Please Enter Description for your post'),),
             Row(mainAxisAlignment: MainAxisAlignment.center,children:[
               Column(children:[
                 RaisedButton(color: Colors.lightBlue[800],onPressed:(){getImage();},child: Text('Pick an Image',style:TextStyle(fontSize: 18,color:Colors.white,fontWeight:FontWeight.bold)),),
                 _image == null ? Text('No Image Selected') : Image.file(_image,width: 350,height: 350,fit: BoxFit.contain,)
               ])
             ]),
+            
           ]
         ),
       )
     );
+  }
+  void UploadPost(titleController,descriptionController){
+    Firestore.instance.collection('post').document('title').setData({'title':titleController.runtimeType,'description':descriptionController});
   }
 }
