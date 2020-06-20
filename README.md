@@ -1,4 +1,4 @@
-# fake_to_nahin
+# fake-to-nahin
 
 A new Flutter project.
 
