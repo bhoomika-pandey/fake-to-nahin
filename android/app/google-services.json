@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "636015879669",
+    "firebase_url": "https://faketonahin.firebaseio.com",
+    "project_id": "faketonahin",
+    "storage_bucket": "faketonahin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:636015879669:android:1059785849cd6455762cbc",
+        "android_client_info": {
+          "package_name": "com.gullycoders.faketonahin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "636015879669-761tonas6qgb1dv63l9dkjf7c77appfn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpSor2Ac-XeuQAGqt3Tt3iv85nIpDo0jI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "636015879669-761tonas6qgb1dv63l9dkjf7c77appfn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
