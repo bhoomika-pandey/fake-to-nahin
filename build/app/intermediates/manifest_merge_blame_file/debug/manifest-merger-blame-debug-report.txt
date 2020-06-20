@@ -12,14 +12,14 @@
 12         to allow setting breakpoints, to provide hot reload, etc.
 13    -->
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->/home/genius/Desktop/Hack Jaipur/fake_to_nahin/android/app/src/debug/AndroidManifest.xml:6:5-66
-14-->/home/genius/Desktop/Hack Jaipur/fake_to_nahin/android/app/src/debug/AndroidManifest.xml:6:22-64
+14-->/home/genius/Desktop/Hack Jaipur/fake-to-nahin/android/app/src/debug/AndroidManifest.xml:6:5-66
+14-->/home/genius/Desktop/Hack Jaipur/fake-to-nahin/android/app/src/debug/AndroidManifest.xml:6:22-64
 15    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-15-->[:image_picker] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-80
-15-->[:image_picker] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-77
+15-->[:image_picker] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-80
+15-->[:image_picker] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-77
 16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-16-->[:image_picker] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-81
-16-->[:image_picker] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-78
+16-->[:image_picker] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-81
+16-->[:image_picker] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-78
 17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 17-->[com.google.android.gms:play-services-measurement:17.2.2] /home/genius/.gradle/caches/transforms-2/files-2.1/8cadd285ef9e96141e1f84f3ea5670d8/play-services-measurement-17.2.2/AndroidManifest.xml:24:5-79
 17-->[com.google.android.gms:play-services-measurement:17.2.2] /home/genius/.gradle/caches/transforms-2/files-2.1/8cadd285ef9e96141e1f84f3ea5670d8/play-services-measurement-17.2.2/AndroidManifest.xml:24:22-76
@@ -40,30 +40,30 @@
 26         FlutterApplication and put your custom class here.
 27    -->
 28    <application
-28-->/home/genius/Desktop/Hack Jaipur/fake_to_nahin/android/app/src/main/AndroidManifest.xml:8:5-46:19
+28-->/home/genius/Desktop/Hack Jaipur/fake-to-nahin/android/app/src/main/AndroidManifest.xml:8:5-46:19
 29        android:name="io.flutter.app.FlutterApplication"
-29-->/home/genius/Desktop/Hack Jaipur/fake_to_nahin/android/app/src/main/AndroidManifest.xml:9:9-57
+29-->/home/genius/Desktop/Hack Jaipur/fake-to-nahin/android/app/src/main/AndroidManifest.xml:9:9-57
 30        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 30-->[androidx.core:core:1.1.0] /home/genius/.gradle/caches/transforms-2/files-2.1/bef79c3e255356c0892d43a27fa086a0/core-1.1.0/AndroidManifest.xml:24:18-86
 31        android:debuggable="true"
 32        android:icon="@mipmap/ic_launcher"
-32-->/home/genius/Desktop/Hack Jaipur/fake_to_nahin/android/app/src/main/AndroidManifest.xml:11:9-43
+32-->/home/genius/Desktop/Hack Jaipur/fake-to-nahin/android/app/src/main/AndroidManifest.xml:11:9-43
 33        android:label="fake_to_nahin" >
-33-->/home/genius/Desktop/Hack Jaipur/fake_to_nahin/android/app/src/main/AndroidManifest.xml:10:9-38
+33-->/home/genius/Desktop/Hack Jaipur/fake-to-nahin/android/app/src/main/AndroidManifest.xml:10:9-38
 34        <activity
-34-->/home/genius/Desktop/Hack Jaipur/fake_to_nahin/android/app/src/main/AndroidManifest.xml:12:9-40:20
+34-->/home/genius/Desktop/Hack Jaipur/fake-to-nahin/android/app/src/main/AndroidManifest.xml:12:9-40:20
 35            android:name="com.example.fake_to_nahin.MainActivity"
-35-->/home/genius/Desktop/Hack Jaipur/fake_to_nahin/android/app/src/main/AndroidManifest.xml:13:13-41
+35-->/home/genius/Desktop/Hack Jaipur/fake-to-nahin/android/app/src/main/AndroidManifest.xml:13:13-41
 36            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-36-->/home/genius/Desktop/Hack Jaipur/fake_to_nahin/android/app/src/main/AndroidManifest.xml:16:13-163
+36-->/home/genius/Desktop/Hack Jaipur/fake-to-nahin/android/app/src/main/AndroidManifest.xml:16:13-163
 37            android:hardwareAccelerated="true"
-37-->/home/genius/Desktop/Hack Jaipur/fake_to_nahin/android/app/src/main/AndroidManifest.xml:17:13-47
+37-->/home/genius/Desktop/Hack Jaipur/fake-to-nahin/android/app/src/main/AndroidManifest.xml:17:13-47
 38            android:launchMode="singleTop"
-38-->/home/genius/Desktop/Hack Jaipur/fake_to_nahin/android/app/src/main/AndroidManifest.xml:14:13-43
+38-->/home/genius/Desktop/Hack Jaipur/fake-to-nahin/android/app/src/main/AndroidManifest.xml:14:13-43
 39            android:theme="@style/LaunchTheme"
-39-->/home/genius/Desktop/Hack Jaipur/fake_to_nahin/android/app/src/main/AndroidManifest.xml:15:13-47
+39-->/home/genius/Desktop/Hack Jaipur/fake-to-nahin/android/app/src/main/AndroidManifest.xml:15:13-47
 40            android:windowSoftInputMode="adjustResize" >
-40-->/home/genius/Desktop/Hack Jaipur/fake_to_nahin/android/app/src/main/AndroidManifest.xml:18:13-55
+40-->/home/genius/Desktop/Hack Jaipur/fake-to-nahin/android/app/src/main/AndroidManifest.xml:18:13-55
 41
 42            <!--
 43                 Specifies an Android theme to apply to this Activity as soon as
@@ -72,11 +72,11 @@
 46                 to determine the Window background behind the Flutter UI.
 47            -->
 48            <meta-data
-48-->/home/genius/Desktop/Hack Jaipur/fake_to_nahin/android/app/src/main/AndroidManifest.xml:23:13-26:17
+48-->/home/genius/Desktop/Hack Jaipur/fake-to-nahin/android/app/src/main/AndroidManifest.xml:23:13-26:17
 49                android:name="io.flutter.embedding.android.NormalTheme"
-49-->/home/genius/Desktop/Hack Jaipur/fake_to_nahin/android/app/src/main/AndroidManifest.xml:24:15-70
+49-->/home/genius/Desktop/Hack Jaipur/fake-to-nahin/android/app/src/main/AndroidManifest.xml:24:15-70
 50                android:resource="@style/NormalTheme" />
-50-->/home/genius/Desktop/Hack Jaipur/fake_to_nahin/android/app/src/main/AndroidManifest.xml:25:15-52
+50-->/home/genius/Desktop/Hack Jaipur/fake-to-nahin/android/app/src/main/AndroidManifest.xml:25:15-52
 51            <!--
 52                 Displays an Android View that continues showing the launch screen
 53                 Drawable until Flutter paints its first frame, then this splash
@@ -85,21 +85,21 @@
 56                 Flutter's first frame.
 57            -->
 58            <meta-data
-58-->/home/genius/Desktop/Hack Jaipur/fake_to_nahin/android/app/src/main/AndroidManifest.xml:32:13-35:17
+58-->/home/genius/Desktop/Hack Jaipur/fake-to-nahin/android/app/src/main/AndroidManifest.xml:32:13-35:17
 59                android:name="io.flutter.embedding.android.SplashScreenDrawable"
-59-->/home/genius/Desktop/Hack Jaipur/fake_to_nahin/android/app/src/main/AndroidManifest.xml:33:15-79
+59-->/home/genius/Desktop/Hack Jaipur/fake-to-nahin/android/app/src/main/AndroidManifest.xml:33:15-79
 60                android:resource="@drawable/launch_background" />
-60-->/home/genius/Desktop/Hack Jaipur/fake_to_nahin/android/app/src/main/AndroidManifest.xml:34:15-61
+60-->/home/genius/Desktop/Hack Jaipur/fake-to-nahin/android/app/src/main/AndroidManifest.xml:34:15-61
 61
 62            <intent-filter>
-62-->/home/genius/Desktop/Hack Jaipur/fake_to_nahin/android/app/src/main/AndroidManifest.xml:36:13-39:29
+62-->/home/genius/Desktop/Hack Jaipur/fake-to-nahin/android/app/src/main/AndroidManifest.xml:36:13-39:29
 63                <action android:name="android.intent.action.MAIN" />
-63-->/home/genius/Desktop/Hack Jaipur/fake_to_nahin/android/app/src/main/AndroidManifest.xml:37:17-68
-63-->/home/genius/Desktop/Hack Jaipur/fake_to_nahin/android/app/src/main/AndroidManifest.xml:37:25-66
+63-->/home/genius/Desktop/Hack Jaipur/fake-to-nahin/android/app/src/main/AndroidManifest.xml:37:17-68
+63-->/home/genius/Desktop/Hack Jaipur/fake-to-nahin/android/app/src/main/AndroidManifest.xml:37:25-66
 64
 65                <category android:name="android.intent.category.LAUNCHER" />
-65-->/home/genius/Desktop/Hack Jaipur/fake_to_nahin/android/app/src/main/AndroidManifest.xml:38:17-76
-65-->/home/genius/Desktop/Hack Jaipur/fake_to_nahin/android/app/src/main/AndroidManifest.xml:38:27-74
+65-->/home/genius/Desktop/Hack Jaipur/fake-to-nahin/android/app/src/main/AndroidManifest.xml:38:17-76
+65-->/home/genius/Desktop/Hack Jaipur/fake-to-nahin/android/app/src/main/AndroidManifest.xml:38:27-74
 66            </intent-filter>
 67        </activity>
 68        <!--
@@ -107,50 +107,50 @@
 70             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
 71        -->
 72        <meta-data
-72-->/home/genius/Desktop/Hack Jaipur/fake_to_nahin/android/app/src/main/AndroidManifest.xml:43:9-45:33
+72-->/home/genius/Desktop/Hack Jaipur/fake-to-nahin/android/app/src/main/AndroidManifest.xml:43:9-45:33
 73            android:name="flutterEmbedding"
-73-->/home/genius/Desktop/Hack Jaipur/fake_to_nahin/android/app/src/main/AndroidManifest.xml:44:13-44
+73-->/home/genius/Desktop/Hack Jaipur/fake-to-nahin/android/app/src/main/AndroidManifest.xml:44:13-44
 74            android:value="2" />
-74-->/home/genius/Desktop/Hack Jaipur/fake_to_nahin/android/app/src/main/AndroidManifest.xml:45:13-30
+74-->/home/genius/Desktop/Hack Jaipur/fake-to-nahin/android/app/src/main/AndroidManifest.xml:45:13-30
 75
 76        <service
-76-->[:firebase_storage] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+76-->[:firebase_storage] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
 77            android:name="com.google.firebase.components.ComponentDiscoveryService"
-77-->[:firebase_storage] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:8:18-89
+77-->[:firebase_storage] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:8:18-89
 78            android:directBootAware="true"
 78-->[com.google.firebase:firebase-common:19.3.0] /home/genius/.gradle/caches/transforms-2/files-2.1/f2f426003af74264b96f365ad6c07163/jetified-firebase-common-19.3.0/AndroidManifest.xml:34:13-43
 79            android:exported="false" >
 79-->[com.google.firebase:firebase-auth:19.2.0] /home/genius/.gradle/caches/transforms-2/files-2.1/2f6b0b11ab68c24e946880bcfa3551ca/firebase-auth-19.2.0/AndroidManifest.xml:35:13-37
 80            <meta-data
-80-->[:firebase_storage] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+80-->[:firebase_storage] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
 81                android:name="com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar"
-81-->[:firebase_storage] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-126
+81-->[:firebase_storage] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-126
 82                android:value="com.google.firebase.components.ComponentRegistrar" />
-82-->[:firebase_storage] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+82-->[:firebase_storage] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
 83            <meta-data
-83-->[:firebase_auth] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+83-->[:firebase_auth] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
 84                android:name="com.google.firebase.components:io.flutter.plugins.firebaseauth.FlutterFirebaseAppRegistrar"
-84-->[:firebase_auth] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-122
+84-->[:firebase_auth] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-122
 85                android:value="com.google.firebase.components.ComponentRegistrar" />
-85-->[:firebase_auth] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+85-->[:firebase_auth] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
 86            <meta-data
-86-->[:cloud_firestore] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+86-->[:cloud_firestore] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
 87                android:name="com.google.firebase.components:io.flutter.plugins.firebase.cloudfirestore.FlutterFirebaseAppRegistrar"
-87-->[:cloud_firestore] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-133
+87-->[:cloud_firestore] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-133
 88                android:value="com.google.firebase.components.ComponentRegistrar" />
-88-->[:cloud_firestore] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+88-->[:cloud_firestore] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
 89            <meta-data
-89-->[:firebase_database] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+89-->[:firebase_database] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
 90                android:name="com.google.firebase.components:io.flutter.plugins.firebase.database.FlutterFirebaseAppRegistrar"
-90-->[:firebase_database] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-127
+90-->[:firebase_database] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-127
 91                android:value="com.google.firebase.components.ComponentRegistrar" />
-91-->[:firebase_database] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+91-->[:firebase_database] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
 92            <meta-data
-92-->[:firebase_core] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+92-->[:firebase_core] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
 93                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseAppRegistrar"
-93-->[:firebase_core] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-123
+93-->[:firebase_core] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-123
 94                android:value="com.google.firebase.components.ComponentRegistrar" />
-94-->[:firebase_core] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+94-->[:firebase_core] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
 95            <meta-data
 95-->[com.google.firebase:firebase-auth:19.2.0] /home/genius/.gradle/caches/transforms-2/files-2.1/2f6b0b11ab68c24e946880bcfa3551ca/firebase-auth-19.2.0/AndroidManifest.xml:36:13-38:85
 96                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
@@ -190,31 +190,31 @@
 113        </service>
 114
 115        <provider
-115-->[:image_picker] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:11:9-19:20
+115-->[:image_picker] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:11:9-19:20
 116            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
-116-->[:image_picker] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-82
+116-->[:image_picker] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-82
 117            android:authorities="com.gullycoders.faketonahin.flutter.image_provider"
-117-->[:image_picker] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-74
+117-->[:image_picker] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-74
 118            android:exported="false"
-118-->[:image_picker] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-37
+118-->[:image_picker] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-37
 119            android:grantUriPermissions="true" >
-119-->[:image_picker] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-47
+119-->[:image_picker] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-47
 120            <meta-data
-120-->[:image_picker] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-18:75
+120-->[:image_picker] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-18:75
 121                android:name="android.support.FILE_PROVIDER_PATHS"
-121-->[:image_picker] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:17:17-67
+121-->[:image_picker] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:17:17-67
 122                android:resource="@xml/flutter_image_picker_file_paths" />
-122-->[:image_picker] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-72
+122-->[:image_picker] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-72
 123        </provider>
 124
 125        <activity
-125-->[:url_launcher] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-11:74
+125-->[:url_launcher] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-11:74
 126            android:name="io.flutter.plugins.urllauncher.UrlLauncherPlugin$WebViewActivity"
-126-->[:url_launcher] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-92
+126-->[:url_launcher] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-92
 127            android:exported="false"
-127-->[:url_launcher] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:10:13-37
+127-->[:url_launcher] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:10:13-37
 128            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-128-->[:url_launcher] /home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-71
+128-->[:url_launcher] /home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-71
 129        <activity
 129-->[com.google.firebase:firebase-auth:19.2.0] /home/genius/.gradle/caches/transforms-2/files-2.1/2f6b0b11ab68c24e946880bcfa3551ca/firebase-auth-19.2.0/AndroidManifest.xml:24:9-31:50
 130            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"

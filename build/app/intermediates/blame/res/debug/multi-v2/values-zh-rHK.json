@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/genius/Desktop/Hack Jaipur/fake_to_nahin/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rHK/values-zh-rHK.xml",
+            "outputFile": "/home/genius/Desktop/Hack Jaipur/fake-to-nahin/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rHK/values-zh-rHK.xml",
             "map": [
                 {
                     "source": "/home/genius/.gradle/caches/transforms-2/files-2.1/9cca5f1278ef9f1a6445188146e629ad/play-services-base-17.1.0/res/values-zh-rHK/values.xml",
