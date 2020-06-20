@@ -1,45 +1,41 @@
 import 'package:flutter/material.dart';
+import '../controllers/drawer.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class HomeScreen extends StatefulWidget {
+class MyPostsScreen extends StatefulWidget {
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  _MyPostsScreenState createState() => _MyPostsScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _MyPostsScreenState extends State<MyPostsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
-        // child: DrawerButton(),
-      ),
+      drawer: DrawerButton(),
       appBar: AppBar(
-        title: Text(
-          'Fake To Nahin',
-          style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-        ),
+        title:Text('Fake To Nahin',style: TextStyle(fontSize:25,fontWeight: FontWeight.bold)),
         actions: [
           // New Post Button
           RaisedButton(
-            splashColor: Colors.white54,
-            color: Colors.lightBlue[800],
-            onPressed: () {
-              Navigator.pushNamed(context, "CreatePost");
-            },
-            child: Row(children: [
-              Icon(
-                Icons.add_circle_outline,
-                color: Colors.white,
-              ),
-              Text(
-                'New Post',
-                style: TextStyle(color: Colors.white,fontSize: 20),
-              )
-            ]),
-          )
+              splashColor: Colors.white54,
+              color: Colors.lightBlue[800],
+              onPressed: () {
+                Navigator.pushNamed(context, "CreatePost");
+              },
+              child: Row(children: [
+                Icon(
+                  Icons.add_circle_outline,
+                  color: Colors.white,
+                ),
+                Text(
+                  'New Post',
+                  style: TextStyle(color: Colors.white,fontSize: 20),
+                )
+              ]),
+            )
         ],
       ),
-      body: Container(
+      body:Container(
         alignment:Alignment.topCenter,
         padding: EdgeInsets.all(5),
         child: StreamBuilder(
