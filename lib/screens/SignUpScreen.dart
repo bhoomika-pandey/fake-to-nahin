@@ -174,7 +174,7 @@ class MyCustomFormState extends State<MyCustomForm> {
             },
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 16.0),
+            padding: EdgeInsets.symmetric(vertical: 16.0),
             child: RaisedButton(
               onPressed: () {
                 // Store user in Database

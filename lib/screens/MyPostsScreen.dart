@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../controllers/drawer.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+
+import 'drawer.dart';
 
 class MyPostsScreen extends StatefulWidget {
   @override

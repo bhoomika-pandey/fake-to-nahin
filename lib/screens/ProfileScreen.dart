@@ -1,5 +1,6 @@
-import 'package:fake_to_nahin/controllers/drawer.dart';
 import 'package:flutter/material.dart';
+
+import 'drawer.dart';
 
 class ProfileScreen extends StatefulWidget {
   @override
