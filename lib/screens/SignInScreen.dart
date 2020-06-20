@@ -67,27 +67,24 @@ class _SignInScreenState extends State<SignInScreen> {
               child: Container(
                 height: 60,
                 child: RaisedButton(
-                  onPressed: () async {
-                    final usersCollectionRef =
-                        Firestore.instance.collection("users");
-                    final userDoc = await usersCollectionRef
-                        .document(emailLoginController.text)
-                        .get();
-
-                    // if (userDoc.data["password"] ==
-                    //     passwordLoginController.text) {
-                    //   Navigator.pushReplacementNamed(context, 'Home');
-                    // } else {
-                      return showDialog(
-                        context: context,
-                        builder: (context) {
-                          return AlertDialog(
-                            content: Text(userDoc.data.toString()),
-                          );
-                        },
-                      );
-                    }
-                  ,
+                  onPressed: () {
+                    getData(emailLoginController.text).then((userDoc) => {
+                          if (userDoc.data["password"] ==
+                              passwordLoginController.text)
+                            {Navigator.pushReplacementNamed(context, 'Home')}
+                          else
+                            {
+                              showDialog(
+                                context: context,
+                                builder: (context) {
+                                  return AlertDialog(
+                                    content: Text("Password Incorrect"),
+                                  );
+                                },
+                              )
+                            }
+                        });
+                  },
                   color: Colors.lightBlue[800],
                   child: Text(
                     'SIGN IN',
@@ -127,6 +124,11 @@ class _SignInScreenState extends State<SignInScreen> {
         ],
       ),
     );
+  }
+
+  getData(String uid) async {
+    final usersCollectionRef = Firestore.instance.collection("users");
+    return usersCollectionRef.document(uid).get();
   }
 }
 
