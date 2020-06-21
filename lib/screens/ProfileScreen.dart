@@ -15,7 +15,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Scaffold(
       drawer: DrawerButton(),
       appBar: AppBar(
-        title: Text('Fake To Nahin',
+        title: Text('Your Profile',
             style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
         actions: [
           RaisedButton(
@@ -40,7 +40,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     shape: BoxShape.circle,
                     image: DecorationImage(
                         image: (globals.currentUser.imagePath != null) ?NetworkImage(globals.currentUser.imagePath):NetworkImage(
-                            'https://www.eguardtech.com/wp-content/uploads/2018/08/Network-Profile.png')))),
+                            'https://firebasestorage.googleapis.com/v0/b/faketonahin.appspot.com/o/profile%2Fyeah.png?alt=media&token=5bc4f276-9c51-4c0b-9e76-7992868438f0')))),
             Text(globals.currentUser.username,
                 style: TextStyle(
                     color: Colors.green,

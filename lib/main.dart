@@ -61,7 +61,7 @@ class MyApp extends StatelessWidget {
         'ProfileEdit': (context) => ProfileEditScreen(),
         // 'Post': (context) => PostScreen(),
         'MyPosts': (context) => MyPostsScreen(),
-        'SavedPosts': (context) => SavedPostsScreen(),
+        // 'SavedPosts': (context) => SavedPostsScreen(),
       },
     );
   }

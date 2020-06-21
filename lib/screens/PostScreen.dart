@@ -24,8 +24,26 @@ class _PostScreenState extends State<PostScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text('Fake To Nahin',
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold))),
+          title: Text('Fake To Nahin',
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
+          actions: <Widget>[
+            post.username == globals.currentUser.username
+                ? RaisedButton(
+                    textTheme: ButtonTextTheme.primary,
+                    color: Theme.of(context).primaryColor,
+                    splashColor: Colors.white54,
+                    onPressed: () =>
+                        deletePost().then((value) => {Navigator.pop(context)}),
+                    child: Row(
+                      children: <Widget>[
+                        Icon(Icons.delete),
+                        Text("Delete Post", style: TextStyle(fontSize: 17))
+                      ],
+                    ),
+                  )
+                : Text("")
+          ],
+        ),
         body: Container(
             alignment: Alignment.topCenter,
             padding: EdgeInsets.all(10),
@@ -201,5 +219,21 @@ class _PostScreenState extends State<PostScreen> {
     } else {
       throw 'Could not launch $link';
     }
+  }
+
+  Future deletePost() async {
+    // delete all links to the post
+    await Firestore.instance
+        .collection("posts")
+        .document(post.id)
+        .collection('resources')
+        .getDocuments()
+        .then((snapshot) => {
+              for (DocumentSnapshot ds in snapshot.documents)
+                {ds.reference.delete()}
+            });
+
+    // delete post
+    await Firestore.instance.collection("posts").document(post.id).delete();
   }
 }

@@ -52,7 +52,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     .orderBy("dateCreated", descending: true)
                     .snapshots(),
                 builder: (context, snapshot) {
-                  if (!snapshot.hasData) return Text('Loading...');
+                  if (!snapshot.hasData)
+                    return Text('No Post Yet',
+                        style: TextStyle(fontSize: 20.0));
                   return ListView.builder(
                       itemCount: snapshot.data.documents.length,
                       itemBuilder: (context, index) => _buildPostCard(
@@ -96,7 +98,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(post.username,
+                          Text('@' + post.username,
                               style: TextStyle(
                                   fontSize: 22, fontWeight: FontWeight.bold)),
                           Text(post.dateCreated,
