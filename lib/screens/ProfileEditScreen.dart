@@ -1,9 +1,9 @@
 import 'package:fake_to_nahin/models/UserModel.dart';
+import 'package:fake_to_nahin/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-import 'drawer.dart';
 
 class ProfileEditScreen extends StatefulWidget {
   @override

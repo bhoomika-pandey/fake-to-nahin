@@ -3,6 +3,7 @@ import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:random_string/random_string.dart';
 
 class CreatePostScreen extends StatefulWidget {
   @override
@@ -36,7 +37,7 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
               color: Theme.of(context).primaryColor,
               splashColor: Colors.white54,
               onPressed: () {
-                UploadPost(titleController, descriptionController);
+                uploadPost(titleController, descriptionController);
                 Navigator.pushNamedAndRemoveUntil(
                     context, 'Home', ModalRoute.withName('/'));
               },
@@ -105,10 +106,15 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
         ));
   }
 
-  void UploadPost(titleController, descriptionController) {
+  void uploadPost(titleController, descriptionController) {
     Firestore.instance.collection('post').document('title').setData({
       'title': titleController.runtimeType,
       'description': descriptionController
     });
   }
+}
+
+int currentTimeInSeconds() {
+  var ms = (new DateTime.now()).millisecondsSinceEpoch;
+  return (ms / 1000).round();
 }
