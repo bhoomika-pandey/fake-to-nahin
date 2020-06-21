@@ -1,5 +1,6 @@
 import 'package:fake_to_nahin/widgets/drawer.dart';
 import 'package:flutter/material.dart';
+import 'package:fake_to_nahin/globals.dart' as globals;
 
 class ProfileScreen extends StatefulWidget {
   @override
@@ -7,6 +8,8 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
+  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +41,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     image: DecorationImage(
                         image: NetworkImage(
                             'https://www.eguardtech.com/wp-content/uploads/2018/08/Network-Profile.png')))),
-            Text('Name Variable Here',
+            Text(globals.currentUser.username,
                 style: TextStyle(
                     color: Colors.green,
                     fontWeight: FontWeight.bold,
@@ -48,8 +51,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 margin: EdgeInsets.fromLTRB(0, 25, 0, 10),
                 child: Row(
                   children: [
-                    Text('Username:', style: TextStyle(fontSize: 22)),
-                    Text('Username variable in line37',
+                    Text('Name:', style: TextStyle(fontSize: 22)),
+                    Text(capitalize(globals.currentUser.firstName)+' '+capitalize(globals.currentUser.lastName),
                         style: TextStyle(
                             fontSize: 22, fontWeight: FontWeight.bold)),
                   ],
@@ -60,7 +63,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 child: Row(
                   children: [
                     Text('City:', style: TextStyle(fontSize: 22)),
-                    Text('City Variable in line44',
+                    Text(capitalize(globals.currentUser.city),
                         style: TextStyle(
                             fontSize: 22, fontWeight: FontWeight.bold)),
                   ],
@@ -71,7 +74,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 child: Row(
                   children: [
                     Text('State:', style: TextStyle(fontSize: 22)),
-                    Text('State Variable in line51',
+                    Text(capitalize(globals.currentUser.state),
                         style: TextStyle(
                             fontSize: 22, fontWeight: FontWeight.bold)),
                   ],
@@ -127,4 +130,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ]),
     );
   }
+  
+  String capitalize(word) {
+      return "${word[0].toUpperCase()}${word.substring(1)}";
+    }
+
 }

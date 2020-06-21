@@ -3,7 +3,8 @@ import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:random_string/random_string.dart';
+import 'package:path/path.dart' as Path;
+import 'package:fake_to_nahin/globals.dart' as globals;
 
 class CreatePostScreen extends StatefulWidget {
   @override
@@ -12,6 +13,7 @@ class CreatePostScreen extends StatefulWidget {
 
 class _CreatePostScreenState extends State<CreatePostScreen> {
   File _image;
+  var _uploadedFileURL;
   final picker = ImagePicker();
 
   Future getImage() async {
@@ -22,7 +24,7 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
     });
   }
 
-  var storage = FirebaseStorage.instance;
+  var storage = FirebaseStorage.instance.ref();
   TextEditingController titleController = new TextEditingController();
   TextEditingController descriptionController = new TextEditingController();
   @override
@@ -37,9 +39,15 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
               color: Theme.of(context).primaryColor,
               splashColor: Colors.white54,
               onPressed: () {
-                uploadPost(titleController, descriptionController);
-                Navigator.pushNamedAndRemoveUntil(
-                    context, 'Home', ModalRoute.withName('/'));
+                uploadFile().then((value) => {
+                  print('hello'),
+                  print(_uploadedFileURL),
+                      uploadPost(titleController.text, descriptionController.text).then(
+                          (value) => {
+                                Navigator.pushNamedAndRemoveUntil(
+                                    context, 'Home', ModalRoute.withName('/'))
+                              })
+                    });
               },
               child: Row(
                 children: <Widget>[
@@ -106,10 +114,28 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
         ));
   }
 
-  void uploadPost(titleController, descriptionController) {
-    Firestore.instance.collection('post').document('title').setData({
-      'title': titleController.runtimeType,
-      'description': descriptionController
+  Future uploadPost(title,description) async {
+    await Firestore.instance.collection('post').add({
+      'title': title,
+      'description': description,
+      'dateCreated': new DateTime.now(),
+      'username': globals.currentUser.username,
+      'imagePath': _uploadedFileURL
+    });
+    print(_uploadedFileURL);
+  }
+
+  Future uploadFile() async {
+    StorageReference storageReference = FirebaseStorage.instance
+        .ref()
+        .child('posts/${Path.basename(_image.path)}');
+    StorageUploadTask uploadTask = storageReference.putFile(_image);
+    await uploadTask.isComplete;
+    print('File Uploaded');
+    storageReference.getDownloadURL().then((fileURL) {
+      setState(() {
+      _uploadedFileURL = fileURL;
+      });
     });
   }
 }

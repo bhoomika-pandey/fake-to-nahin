@@ -1,6 +1,7 @@
 import 'package:fake_to_nahin/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:intl/intl.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -95,7 +96,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontSize: 22, fontWeight: FontWeight.bold
                       )
                     ),
-                    Text(document['dateCreated'],
+                    Text(document['dateCreated'].toDate().toString(),
                       style:
                         TextStyle(fontSize: 20, color: Colors.grey
                       )
@@ -104,9 +105,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 FractionallySizedBox(
                   widthFactor: 0.95,
-                  child: Image.network(
+                  child:(document['imagePath']!=null) ?Image.network(
                     document['imagePath'],fit: BoxFit.fitWidth,
-                  )
+                  ):Text('')
                 ),
                 Text("Description\n",
                   style: TextStyle(
@@ -138,4 +139,9 @@ class _HomeScreenState extends State<HomeScreen> {
       )
     );
   }
+  String formatTimestamp(int timestamp) {
+      var format = new DateFormat('d MMM, hh:mm a');
+      var date = new DateTime.fromMillisecondsSinceEpoch(timestamp * 1000);
+      return format.format(date);
+    }
 }

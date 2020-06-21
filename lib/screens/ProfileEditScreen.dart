@@ -31,7 +31,7 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
         ),
         body: Container(
           child: StreamBuilder<QuerySnapshot>(
-            stream: Firestore.instance.collection('user').snapshots(),
+            stream: Firestore.instance.collection('users').snapshots(),
             builder: (context, snapshot) {
               final userArray = snapshot.data.documents;
               List<UserModel> users = [];
