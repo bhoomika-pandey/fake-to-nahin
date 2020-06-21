@@ -6,6 +6,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:path/path.dart' as Path;
 import 'package:fake_to_nahin/globals.dart' as globals;
+import 'package:intl/intl.dart';
 
 class CreatePostScreen extends StatefulWidget {
   @override
@@ -14,10 +15,9 @@ class CreatePostScreen extends StatefulWidget {
 
 class _CreatePostScreenState extends State<CreatePostScreen> {
   File _image;
-  var _uploadedFileURL;
   final picker = ImagePicker();
 
-  PostModel newPost = PostModel();
+  PostModel newPost;
 
   Future getImage() async {
     final pickedFile = await picker.getImage(source: ImageSource.gallery);
@@ -118,13 +118,14 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
 
   Future uploadPost(
       String title, String description, String downloadUrl) async {
-    await Firestore.instance.collection('post').add({
-      'title': title,
-      'description': description,
-      'dateCreated': new DateTime.now(),
-      'username': globals.currentUser.username,
-      'imagePath': downloadUrl
-    });
+    newPost = PostModel(
+        title,
+        globals.currentUser.username,
+        DateFormat("d MMM yyyy, h:mm a").format(DateTime.now()),
+        description,
+        downloadUrl);
+
+    await Firestore.instance.collection('posts').add(newPost.toMap());
   }
 
   Future<String> uploadFile() async {
@@ -136,9 +137,4 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
     final String url = (await downloadUrl.ref.getDownloadURL());
     return url;
   }
-}
-
-int currentTimeInSeconds() {
-  var ms = (new DateTime.now()).millisecondsSinceEpoch;
-  return (ms / 1000).round();
 }

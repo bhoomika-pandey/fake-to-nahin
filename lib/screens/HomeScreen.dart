@@ -1,3 +1,5 @@
+import 'package:fake_to_nahin/models/PostModel.dart';
+import 'package:fake_to_nahin/screens/PostScreen.dart';
 import 'package:fake_to_nahin/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -46,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
             padding: EdgeInsets.all(5),
             child: StreamBuilder(
                 stream: Firestore.instance
-                    .collection('post')
+                    .collection('posts')
                     .orderBy("dateCreated", descending: true)
                     .snapshots(),
                 builder: (context, snapshot) {
@@ -59,10 +61,17 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _buildPostCard(BuildContext context, DocumentSnapshot document) {
+    var post = PostModel.fromObject(document);
+
     return Card(
         child: InkWell(
             onTap: () {
-              Navigator.pushNamed(context, 'Post');
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => PostScreen(
+                        post)), // the builder of MaterialPageRoute will call the TodoDetail class passing the todo that was passed.
+              );
             },
             child: DecoratedBox(
                 position: DecorationPosition.background,
@@ -78,7 +87,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Column(children: [
                       RichText(
                           text: TextSpan(
-                              text: document['title'],
+                              text: post.title,
                               style: TextStyle(
                                   fontSize: 26,
                                   color: Colors.lightBlue[800],
@@ -86,19 +95,19 @@ class _HomeScreenState extends State<HomeScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(document['username'],
+                          Text(post.username,
                               style: TextStyle(
                                   fontSize: 22, fontWeight: FontWeight.bold)),
-                          Text(document['dateCreated'].toDate().toString(),
+                          Text(post.dateCreated,
                               style:
                                   TextStyle(fontSize: 20, color: Colors.grey))
                         ],
                       ),
                       FractionallySizedBox(
                           widthFactor: 0.95,
-                          child: (document['imagePath'] != null)
+                          child: (post.mediaPath != null)
                               ? Image.network(
-                                  document['imagePath'],
+                                  post.mediaPath,
                                   fit: BoxFit.fitWidth,
                                 )
                               : Text('')),
@@ -111,7 +120,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           overflow: TextOverflow.fade,
                           maxLines: 3,
                           text: TextSpan(
-                              text: document['description'],
+                              text: post.description,
                               style: TextStyle(
                                   fontSize: 18, color: Colors.black))),
                       Text('Read More and View Resources',
@@ -119,11 +128,5 @@ class _HomeScreenState extends State<HomeScreen> {
                               color: Colors.blue,
                               decoration: TextDecoration.underline))
                     ])))));
-  }
-
-  String formatTimestamp(int timestamp) {
-    var format = new DateFormat('d MMM, hh:mm');
-    var date = new DateTime.fromMillisecondsSinceEpoch(timestamp * 1000);
-    return format.format(date);
   }
 }

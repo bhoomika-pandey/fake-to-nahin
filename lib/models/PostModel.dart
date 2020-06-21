@@ -14,10 +14,11 @@ class PostModel {
   // An optional parameter is passed in square brackets. (e.g. -> [this._description])
 
   // Constructor 1 -> when we create a new Todo and the database hasn't assigned an id yet.
-  // PostModel(this._title, this._username, this._dateCreated, this._description,
-  //     this._mediaPath, this._resources);
+  PostModel(this._title, this._username, this._dateCreated, this._description,
+      this._mediaPath,
+      [this._resources]);
 
-  PostModel();
+  // PostModel();
   // There can be only one un-named constructor in a class, sohere we have to use a named constructor.
 
   // Constructor 2 -> when we have an id for e.g. when we are editing the todo.
@@ -72,7 +73,7 @@ class PostModel {
       map["id"] = _id;
     }
 
-    if (_resources.length != 0) {
+    if (_resources != null) {
       map["resources"] = _resources;
     }
     return map;
