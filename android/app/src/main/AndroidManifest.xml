@@ -7,7 +7,7 @@
          FlutterApplication and put your custom class here. -->
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="fake_to_nahin"
+        android:label="Fake To Nahin"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

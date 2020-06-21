@@ -55,6 +55,14 @@ class MyCustomFormState extends State<MyCustomForm> {
       key: _formKey,
       child: ListView(
         children: <Widget>[
+          Container(
+            height: 150.0,
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    fit: BoxFit.contain,
+
+                    image: AssetImage('assets/img/logo.png'))),
+          ),
           TextFormField(
             controller: firstNameController,
             decoration: InputDecoration(labelText: 'First Name'),
