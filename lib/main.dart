@@ -17,11 +17,11 @@ import 'screens/ProfileEditScreen.dart';
 bool loggedIn = false;
 
 void main() {
-  getApplicationDocumentsDirectory().then((dir) => {
-        new File(dir.path + "current_user.json")
-            .readAsString()
-            .then((content) => {print(jsonDecode(content))})
-      });
+  // getApplicationDocumentsDirectory().then((dir) => {
+  //       new File(dir.path + "current_user.json")
+  //           .readAsString()
+  //           .then((content) => {print(jsonDecode(content))})
+  //     });
   runApp(MyApp());
 }
 

@@ -140,7 +140,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
   String formatTimestamp(int timestamp) {
-      var format = new DateFormat('d MMM, hh:mm a');
+      var format = new DateFormat('d MMM, hh:mm');
       var date = new DateTime.fromMillisecondsSinceEpoch(timestamp * 1000);
       return format.format(date);
     }

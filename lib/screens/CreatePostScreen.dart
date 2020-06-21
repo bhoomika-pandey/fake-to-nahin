@@ -1,3 +1,4 @@
+import 'package:fake_to_nahin/models/PostModel.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
@@ -15,6 +16,8 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
   File _image;
   var _uploadedFileURL;
   final picker = ImagePicker();
+
+  PostModel newPost = PostModel();
 
   Future getImage() async {
     final pickedFile = await picker.getImage(source: ImageSource.gallery);
@@ -39,11 +42,10 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
               color: Theme.of(context).primaryColor,
               splashColor: Colors.white54,
               onPressed: () {
-                uploadFile().then((value) => {
-                  print('hello'),
-                  print(_uploadedFileURL),
-                      uploadPost(titleController.text, descriptionController.text).then(
-                          (value) => {
+                uploadFile().then((downloadUrl) => {
+                      uploadPost(titleController.text,
+                              descriptionController.text, downloadUrl)
+                          .then((value) => {
                                 Navigator.pushNamedAndRemoveUntil(
                                     context, 'Home', ModalRoute.withName('/'))
                               })
@@ -114,29 +116,25 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
         ));
   }
 
-  Future uploadPost(title,description) async {
+  Future uploadPost(
+      String title, String description, String downloadUrl) async {
     await Firestore.instance.collection('post').add({
       'title': title,
       'description': description,
       'dateCreated': new DateTime.now(),
       'username': globals.currentUser.username,
-      'imagePath': _uploadedFileURL
+      'imagePath': downloadUrl
     });
-    print(_uploadedFileURL);
   }
 
-  Future uploadFile() async {
-    StorageReference storageReference = FirebaseStorage.instance
+  Future<String> uploadFile() async {
+    var storageReference = FirebaseStorage.instance
         .ref()
         .child('posts/${Path.basename(_image.path)}');
-    StorageUploadTask uploadTask = storageReference.putFile(_image);
-    await uploadTask.isComplete;
-    print('File Uploaded');
-    storageReference.getDownloadURL().then((fileURL) {
-      setState(() {
-      _uploadedFileURL = fileURL;
-      });
-    });
+    final StorageUploadTask uploadTask = storageReference.putFile(_image);
+    final StorageTaskSnapshot downloadUrl = (await uploadTask.onComplete);
+    final String url = (await downloadUrl.ref.getDownloadURL());
+    return url;
   }
 }
 
