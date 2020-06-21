@@ -62,6 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget _buildPostCard(BuildContext context, DocumentSnapshot document) {
     var post = PostModel.fromObject(document);
+    post.id = document.documentID;
 
     return Card(
         child: InkWell(

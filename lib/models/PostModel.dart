@@ -39,6 +39,10 @@ class PostModel {
     _title = title;
   }
 
+  set id(String id) {
+    _id = id;
+  }
+
   set description(String description) {
     _description = description;
   }

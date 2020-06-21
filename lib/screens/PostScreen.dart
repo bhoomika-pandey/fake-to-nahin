@@ -1,8 +1,10 @@
 import 'package:fake_to_nahin/models/PostModel.dart';
+import 'package:fake_to_nahin/models/ResourceModel.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../globals.dart' as globals;
+import 'package:intl/intl.dart';
 
 class PostScreen extends StatefulWidget {
   PostModel post;
@@ -15,6 +17,7 @@ class PostScreen extends StatefulWidget {
 class _PostScreenState extends State<PostScreen> {
   PostModel post;
   _PostScreenState(this.post);
+  TextEditingController resourceController = TextEditingController();
 
   String id;
   @override
@@ -101,16 +104,26 @@ class _PostScreenState extends State<PostScreen> {
                                                     return AlertDialog(
                                                       title:
                                                           Text('Enter a link'),
-                                                      content:Column(children: [
+                                                      content:
+                                                          Column(children: [
                                                         TextField(
+                                                          controller:
+                                                              resourceController,
                                                           decoration:
                                                               InputDecoration(
                                                                   hintText:
                                                                       'Enter link here'),
                                                         ),
-                                                        RaisedButton(onPressed: (){
-                                                         
-                                                        },child:Text('post'))
+                                                        RaisedButton(
+                                                            onPressed: () {
+                                                              addResourceToPost()
+                                                                  .then(
+                                                                      (value) =>
+                                                                          {
+                                                                            Navigator.of(context).pop()
+                                                                          });
+                                                            },
+                                                            child: Text('Post'))
                                                       ]),
                                                     );
                                                   },
@@ -126,11 +139,12 @@ class _PostScreenState extends State<PostScreen> {
                                             ))
                                       ],
                                     ),
+                                    
                                     StreamBuilder(
                                         stream: Firestore.instance
                                             .collection('post')
-                                            .document()
-                                            .collection('comments')
+                                            .document(post.id)
+                                            .collection('resources')
                                             .snapshots(),
                                         builder: (context, snapshot) {
                                           if (!snapshot.hasData)
@@ -152,22 +166,33 @@ class _PostScreenState extends State<PostScreen> {
                         ))))));
   }
 
+  Future addResourceToPost() async {
+    ResourceModel newResource = ResourceModel(
+        globals.currentUser.username,
+        DateFormat("d MMM yyyy, h:mm a").format(DateTime.now()),
+        resourceController.text);
+
+    await Firestore.instance
+        .collection('posts')
+        .document(post.id)
+        .collection('resources')
+        .add(newResource.toMap());
+  }
+
   Widget _buildCommentCards(BuildContext context, DocumentSnapshot document) {
+    var resource = ResourceModel.fromObject(document);
+    resource.id = document.documentID;
+
     return Container(
       padding: EdgeInsets.all(3),
       child: Column(children: [
         Row(
-          children: [
-            (!document['imagePath'] == null)
-                ? (Image.asset('assets/img/as.png'))
-                : (Image.network(document['imagePath'])),
-            Text(document['username'])
-          ],
+          children: [Text(resource.username)],
         ),
-        Row(children: [Text(document['dateCreated'])]),
+        Row(children: [Text(resource.dateCreated)]),
         InkWell(
-          onTap: () => launch(document['link']),
-          child: RichText(text: TextSpan(text: document['link'])),
+          onTap: () => launch(resource.link),
+          child: RichText(text: TextSpan(text: resource.link)),
         )
       ]),
     );
