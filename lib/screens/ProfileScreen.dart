@@ -23,7 +23,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               Navigator.pushNamed(context, 'ProfileEdit');
             },
             child: Row(children: [Icon(Icons.edit), Text('Edit Profile')]),
-            color: Colors.green,
+            color: Colors.lightBlue[800],
             textColor: Colors.white,
           )
         ],
@@ -39,7 +39,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     image: DecorationImage(
-                        image: NetworkImage(
+                        image: (globals.currentUser.imagePath != null) ?NetworkImage(globals.currentUser.imagePath):NetworkImage(
                             'https://www.eguardtech.com/wp-content/uploads/2018/08/Network-Profile.png')))),
             Text(globals.currentUser.username,
                 style: TextStyle(
@@ -85,7 +85,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 child: Row(
                   children: [
                     Text('Country:', style: TextStyle(fontSize: 22)),
-                    Text('Country Variable in line58',
+                    Text(capitalize(globals.currentUser.country),
                         style: TextStyle(
                             fontSize: 22, fontWeight: FontWeight.bold)),
                   ],
@@ -96,7 +96,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 child: Row(
                   children: [
                     Text('Mobile:', style: TextStyle(fontSize: 22)),
-                    Text('Mobile Variable in line65',
+                    Text(capitalize(globals.currentUser.mobile),
                         style: TextStyle(
                             fontSize: 22, fontWeight: FontWeight.bold)),
                   ],
@@ -107,7 +107,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 child: Row(
                   children: [
                     Text('E-mail ID:', style: TextStyle(fontSize: 22)),
-                    Text('E-mail ID variable in line72',
+                    Text(globals.currentUser.email,
                         style: TextStyle(
                             fontSize: 22, fontWeight: FontWeight.bold)),
                   ],
@@ -115,18 +115,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 )),
             Card(
                 margin: EdgeInsets.fromLTRB(0, 0, 0, 10),
-                child: Row(
-                  children: [
-                    Text('Password:', style: TextStyle(fontSize: 22)),
-                    RaisedButton(
-                        onPressed: () {},
-                        child: Text('Change Password',
-                            style: TextStyle(
-                                fontSize: 22, fontWeight: FontWeight.bold))),
-                  ],
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                )),
+                // child: Row(
+                //   children: [
+                //     Text('Password:', style: TextStyle(fontSize: 22)),
+                //     RaisedButton(
+                //         onPressed: () {},
+                //         child: Text('Change Password',
+                //             style: TextStyle(
+                //                 fontSize: 22, fontWeight: FontWeight.bold))),
+                //   ],
+                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //   crossAxisAlignment: CrossAxisAlignment.end,
+                // )
+                ),
           ]),
     );
   }
