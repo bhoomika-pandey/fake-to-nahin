@@ -1,4 +1,4 @@
-# fake_to_nahin
+# FAKE TO NAHIN (Check Fake News)
 
 A new Flutter project.
 
