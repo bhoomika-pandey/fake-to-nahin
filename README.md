@@ -1,6 +1,6 @@
-# fake_to_nahin
+# FAKE TO NAHIN (Check Fake News)
 
-A new Flutter project.
+An app for authenticating fake news.
 
 ## Getting Started
 
